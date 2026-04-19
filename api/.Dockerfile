@@ -11,7 +11,7 @@ COPY movie-service/movie-application/pom.xml movie-service/movie-application/pom
 COPY movie-service/movie-container/pom.xml movie-service/movie-container/pom.xml
 
 # Download dependencies
-RUN --mount=type=cache,target=/root/.m2 mvn dependency:go-offline -B
+RUN mvn dependency:go-offline -B
 
 # Copy the rest of the source code
 COPY . .
@@ -20,8 +20,7 @@ COPY . .
 ARG JAR_FILE_PATH
 
 # Build the project
-# We use a cache mount for maven to speed up subsequent builds
-RUN --mount=type=cache,target=/root/.m2 mvn clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 FROM eclipse-temurin:24-jre-alpine AS runtime
 
