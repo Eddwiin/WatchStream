@@ -4,7 +4,7 @@ services:
       context: ./web
       dockerfile: .Dockerfile
     ports:
-      - "4200:80"
+      - "80:80"
   movie-service:
     build:
       context: ./api

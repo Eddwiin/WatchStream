@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@CrossOrigin(origins = ["http://localhost:4200"])
+@CrossOrigin(origins = ["http://localhost:4200", "http://localhost:80"])
 @RequestMapping("/movies", produces = ["application/json"])
 class MovieController {
 
