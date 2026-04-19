@@ -1,0 +1,47 @@
+# Build outputs
+movie-service/target/
+**/target/
+out/
+build/
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+**/.mvn/
+!mvnw
+!mvnw.cmd
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# Kotlin / Gradle caches if any
+.kotlin/
+.gradle/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Documentation and misc
+README.md
+HELP.md
+
+# Optional: test / local env files
+.env
+.env.*

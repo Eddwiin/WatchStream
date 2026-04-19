@@ -1,7 +1,15 @@
 services:
-  app:
+  web:
     build:
       context: ./web
       dockerfile: .Dockerfile
     ports:
-      - "4300:80"
+      - "4200:80"
+  movie-service:
+    build:
+      context: ./api
+      dockerfile: .Dockerfile
+      args:
+        JAR_FILE_PATH: movie-service/movie-container/target/movie-container-0.0.1-SNAPSHOT.jar
+    ports:
+      - "8181:8181"
